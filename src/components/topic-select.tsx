@@ -15,13 +15,16 @@ export const TopicSelect: React.FC<Props> = ({ question }) => {
 
   const [selectedTopics, setSelectedTopics] = useState<string[]>([]);
 
-  const handleSelectTopic = useCallback((topic: string) => {
-    if (selectedTopics.includes(topic)) {
-      setSelectedTopics(selectedTopics.filter((e) => e !== topic));
-    } else if (selectedTopics.length < 3) {
-      setSelectedTopics([...selectedTopics, topic]);
-    }
-  }, [selectedTopics]);
+  const handleSelectTopic = useCallback(
+    (topic: string) => {
+      if (selectedTopics.includes(topic)) {
+        setSelectedTopics(selectedTopics.filter((e) => e !== topic));
+      } else if (selectedTopics.length < 3) {
+        setSelectedTopics([...selectedTopics, topic]);
+      }
+    },
+    [selectedTopics],
+  );
 
   return (
     <>

@@ -20,12 +20,7 @@ export const AgeSelect: React.FC<Props> = ({ question }) => {
   return (
     <div className="select__container">
       {options.map((option, index) => (
-        <button
-          type="button"
-          className="select__button"
-          onClick={handleNavigate}
-          key={id}
-        >
+        <button type="button" className="select__button" onClick={handleNavigate} key={id}>
           {t(`${id}.options.${index}`)}
         </button>
       ))}

@@ -43,9 +43,10 @@ export const FR = {
   },
 
   'email-title': 'Courriel',
-  'email-description': 'Saisissez votre adresse électronique pour obtenir l\'accès complet',
+  'email-description': "Saisissez votre adresse électronique pour obtenir l'accès complet",
   'email-placeholder': 'Votre email',
-  'privacy-policy': 'En continuant, j\'accepte la politique de confidentialité et les conditions d\'utilisation.',
+  'privacy-policy':
+    "En continuant, j'accepte la politique de confidentialité et les conditions d'utilisation.",
   'button-next': 'Suivant',
 
   thanks: 'Merci de votre attention.',

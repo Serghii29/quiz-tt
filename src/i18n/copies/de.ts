@@ -45,7 +45,8 @@ export const DE = {
   'email-title': 'E-Mail',
   'email-description': 'Geben Sie Ihre E-Mail-Adresse ein, um vollen Zugang zu erhalten',
   'email-placeholder': 'Deine E-Mail',
-  'privacy-policy': 'Wenn ich fortfahre, erkläre ich mich mit den Datenschutzbestimmungen und Nutzungsbedingungen einverstanden.',
+  'privacy-policy':
+    'Wenn ich fortfahre, erkläre ich mich mit den Datenschutzbestimmungen und Nutzungsbedingungen einverstanden.',
 
   'button-next': 'Weiter',
 

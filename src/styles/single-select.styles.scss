@@ -13,12 +13,12 @@
     text-align: left;
     border-radius: 16px;
     color: #fff;
-    background-color: #36173D;
+    background-color: #36173d;
     padding: 15px;
   }
 
   &__button.selected {
-    border: 1px solid #E4229B;
+    border: 1px solid #e4229b;
   }
 
   &__checkbox {
@@ -35,8 +35,8 @@
     float: right;
     width: 23px;
     height: 23px;
-    background-color: #6D4376;
-    border: 1px solid #E4229B;
+    background-color: #6d4376;
+    border: 1px solid #e4229b;
     border-radius: 8px;
     vertical-align: sub;
     cursor: pointer;
@@ -66,7 +66,7 @@
   }
 
   &__checkbox:checked + &__custom-checkbox {
-    background-color: #E4229B;
+    background-color: #e4229b;
   }
 }
 

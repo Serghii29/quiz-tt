@@ -15,7 +15,7 @@ import { TopicSelect } from '../../components/topic-select';
 const Quiz: React.FC = () => {
   const { id = 1 } = useParams();
 
-  const [question, setQuestion] = useState< IQuestion>(questions[+id - 1]);
+  const [question, setQuestion] = useState<IQuestion>(questions[+id - 1]);
 
   const { t } = useTranslation();
 

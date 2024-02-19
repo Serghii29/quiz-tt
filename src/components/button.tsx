@@ -6,10 +6,7 @@ type Props = {
 };
 
 export const Button: React.FC<Props> = ({ title }) => (
-  <button
-    type="button"
-    className="button"
-  >
+  <button type="button" className="button">
     {title}
   </button>
 );
