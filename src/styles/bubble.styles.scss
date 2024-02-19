@@ -11,10 +11,15 @@
     margin-bottom: 20px;
     background-color: #36173d;
     border-radius: 50%;
-    transition: all 0.2s ease-in-out;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
 
     &:nth-of-type(2n) {
       margin-top: 20px;
+    }
+
+    &:hover {
+      background-color: #431c4b;
     }
 
     &.selected {

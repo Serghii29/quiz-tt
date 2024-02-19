@@ -2,7 +2,6 @@ import React, { useEffect, useState } from 'react';
 import '../../i18n';
 import { useParams } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
-import '../../styles/quiz.styles.scss';
 import { ProgressBar } from '../../components/progress-bar';
 import { LanguegeSelect } from '../../components/languege-select';
 import { questions } from '../../data';
@@ -11,6 +10,7 @@ import { GenderSelect } from '../../components/gender-select';
 import { AgeSelect } from '../../components/age-select';
 import { BookSelect } from '../../components/book-select';
 import { TopicSelect } from '../../components/topic-select';
+import '../../styles/quiz.styles.scss';
 
 const Quiz: React.FC = () => {
   const { id = 1 } = useParams();
@@ -39,11 +39,11 @@ const Quiz: React.FC = () => {
         <p className="quiz__question-description">{t(`${id}.description`)}</p>
       </div>
 
-      {question.type === 'language-selection' && <LanguegeSelect />}
+      {question.type === 'single-select' && question.id === 1 && <LanguegeSelect />}
 
-      {question.type === 'gender-selection' && <GenderSelect question={question} />}
+      {question.type === 'single-select-image' && <GenderSelect question={question} />}
 
-      {question.type === 'single-select' && <AgeSelect question={question} />}
+      {question.type === 'single-select' && question.id === 3 && <AgeSelect question={question} />}
 
       {question.type === 'multiple-select' && <BookSelect question={question} />}
 

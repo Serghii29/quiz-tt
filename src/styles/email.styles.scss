@@ -1,8 +1,15 @@
 .email {
-  &__container {
+  &__container-text {
     padding-top: 100px;
     text-align: center;
     margin-bottom: 50px;
+  }
+
+  &__form {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 100px;
   }
 
   &__title {
@@ -28,16 +35,14 @@
     color: #fff;
   }
 
-  &__privacy {
-    padding: 0 40px;
-    margin-top: 40px;
-    color: #b6b8c3;
-    text-align: center;
-  }
-
   &__error {
     padding-left: 40px;
-    margin-top: 10px;
     color: #ff0000;
+  }
+
+  &__privacy {
+    padding: 0 40px;
+    color: #b6b8c3;
+    text-align: center;
   }
 }

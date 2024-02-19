@@ -15,6 +15,16 @@
     color: #fff;
     background-color: #36173d;
     padding: 15px;
+    cursor: pointer;
+    transition: all 0.3s;
+
+    &.selected {
+      border: 1px solid #e4229b;
+    }
+
+    &:hover {
+      background-color: #431c4b;
+    }
   }
 
   &__button.selected {

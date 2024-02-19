@@ -23,7 +23,7 @@ export const GenderSelect: React.FC<Props> = ({ question }) => {
       {options.map((option, index) => (
         <button
           type="button"
-          className="gender-select__option"
+          className="gender-select__button"
           onClick={handleNavigate}
           key={option}
         >

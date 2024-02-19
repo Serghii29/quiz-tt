@@ -3,8 +3,8 @@ import React from 'react';
 import * as Yup from 'yup';
 import { useFormik } from 'formik';
 import { useTranslation } from 'react-i18next';
-import '../../styles/email.styles.scss';
 import { Button } from '../../components/button';
+import '../../styles/email.styles.scss';
 
 const Email: React.FC = () => {
   const { t } = useTranslation();
@@ -22,8 +22,8 @@ const Email: React.FC = () => {
   });
 
   return (
-    <>
-      <div className="email__container">
+    <div>
+      <div className="email__container-text">
         <h2 className="email__title">{t('email-title')}</h2>
         <p className="email__description">{t('email-description')}</p>
       </div>
@@ -39,17 +39,17 @@ const Email: React.FC = () => {
             onChange={formik.handleChange}
             onBlur={formik.handleBlur}
           />
-        </label>
 
-        {formik.touched.email && formik.errors.email ? (
-          <div className="email__error">{formik.errors.email}</div>
-        ) : null}
+          {formik.touched.email && formik.errors.email ? (
+            <div className="email__error">{formik.errors.email}</div>
+          ) : null}
+        </label>
 
         <p className="email__privacy">{t('privacy-policy')}</p>
 
-        <Button title={t('button-next')} />
+        <Button type="submit" title={t('button-next')} />
       </form>
-    </>
+    </div>
   );
 };
 

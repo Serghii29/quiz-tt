@@ -16,14 +16,15 @@ export const DE = {
   3: {
     type: 'einzelauswahl',
     title: 'Wie alt sind Sie?',
+    description: '',
     options: ['18-29 Jahre', '30-39 Jahre', '40-49 Jahre', '50+'],
   },
 
   4: {
     type: 'Mehrfachauswahl',
     title: 'Was hassen Sie am meisten an einem Bu?',
+    description: '',
     options: ['Fehlende Logik", "Langsames Tempo", "Fehlender Humor", "Viel zu generisches Ende'],
-    button: 'Weiter',
   },
 
   5: {
@@ -39,7 +40,6 @@ export const DE = {
       'Bad Boy',
       'Milliardär',
     ],
-    button: 'Weiter',
   },
 
   'email-title': 'E-Mail',

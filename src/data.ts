@@ -1,7 +1,7 @@
 export const questions = [
   {
     id: 1,
-    type: 'language-selection',
+    type: 'single-select',
     title: 'What is your preferred language?',
     description: 'Choose language',
     options: ['English', 'French', 'German', 'Spanish'],
@@ -11,7 +11,7 @@ export const questions = [
 
   {
     id: 2,
-    type: 'gender-selection',
+    type: 'single-select-image',
     title: 'What gender do you identify with?',
     description: 'Please share how do you identify yourself',
     options: ['Female', 'Male', 'Other'],

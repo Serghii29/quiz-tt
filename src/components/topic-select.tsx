@@ -2,8 +2,8 @@ import React, { useCallback, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import cn from 'classnames';
 import { IQuestion } from '../types/type';
-import '../styles/bubble.styles.scss';
 import { Button } from './button';
+import '../styles/bubble.styles.scss';
 
 type Props = {
   question: IQuestion;
@@ -33,7 +33,6 @@ export const TopicSelect: React.FC<Props> = ({ question }) => {
           <button
             type="button"
             key={option}
-            // className="bubble__button"
             className={cn('bubble__button', {
               selected: selectedTopics.includes(option),
             })}
@@ -45,7 +44,7 @@ export const TopicSelect: React.FC<Props> = ({ question }) => {
         ))}
       </div>
 
-      <Button title={t('5.button')} />
+      <Button type="button" title={t('button-next')} />
     </>
   );
 };

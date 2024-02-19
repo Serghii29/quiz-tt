@@ -16,14 +16,15 @@ export const FR = {
   3: {
     type: 'sélection unique',
     title: 'Quel est votre âge?',
+    description: '',
     options: ['18-29 années', '30-39 années', '40-49 années', '50+'],
   },
 
   4: {
     type: 'sélection multiple',
     title: "Qu'est-ce que vous détestez le plus dans un livre ?",
+    description: '',
     options: ['Manque de logique', 'Vitesse trop lente', "Manque d'humour", 'Fin trop générique'],
-    button: 'Suivant',
   },
 
   5: {
@@ -39,7 +40,6 @@ export const FR = {
       'Bad Boy',
       'Milliardaire',
     ],
-    button: 'Suivant',
   },
 
   'email-title': 'Courriel',

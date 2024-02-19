@@ -16,14 +16,15 @@ export const ES = {
   3: {
     type: 'selección simple',
     title: '¿Cuál es su edad?',
+    description: '',
     options: ['18-29 años', '30-39 años', '40-49 años', '50+'],
   },
 
   4: {
     type: 'selección múltiple',
     title: '¿Qué es lo que más odia de un libro?',
+    description: '',
     options: ['Falta de lógica', 'Velocidad lenta', 'Falta de humor', 'Final demasiado genérico'],
-    button: 'Siguiente',
   },
 
   5: {
@@ -39,7 +40,6 @@ export const ES = {
       'Chico malo',
       'Multimillonario',
     ],
-    button: 'Siguiente',
   },
 
   'email-title': 'Correo electrónico',

@@ -23,7 +23,7 @@ const ThankYou: React.FC = () => {
         <p className="thanks">{t('download')}</p>
       </button>
 
-      <Button title={t('button-retake')} />
+      <Button type="submit" title={t('button-retake')} />
     </div>
   );
 };

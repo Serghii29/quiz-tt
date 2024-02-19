@@ -1,4 +1,9 @@
 .layout {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   padding: 20px;
   height: 100vh;
+  max-width: 375px;
+  margin: 0 auto;
 }
