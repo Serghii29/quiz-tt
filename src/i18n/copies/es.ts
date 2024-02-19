@@ -1,38 +1,33 @@
 export const ES = {
   1: {
-    type: 'single-select',
+    type: 'selección simple',
     title: '¿Cuál es su lengua preferida?',
     description: 'Elegir idioma',
     options: ['Inglés', 'Francés', 'Alemán', 'Español'],
-    button: '',
   },
 
   2: {
-    type: 'single-select',
+    type: 'selección-imagen-única',
     title: '¿Con qué género se identifica?',
     description: 'Comparta con nosotros cómo se identifica',
     options: ['Mujer', 'Hombre', 'Otro'],
-    button: '',
   },
 
   3: {
-    type: 'single-select',
+    type: 'selección simple',
     title: '¿Cuál es su edad?',
-    description: '',
     options: ['18-29 años', '30-39 años', '40-49 años', '50+'],
-    button: '',
   },
 
   4: {
-    type: 'multiple-select',
+    type: 'selección múltiple',
     title: '¿Qué es lo que más odia de un libro?',
-    description: '',
     options: ['Falta de lógica', 'Velocidad lenta', 'Falta de humor', 'Final demasiado genérico'],
     button: 'Siguiente',
   },
 
   5: {
-    type: 'multiple-select',
+    type: 'burbuja',
     title: '¿Cuáles son sus temas favoritos?',
     description: 'Elige hasta 3 temas que te gusten',
     options: [
@@ -46,4 +41,17 @@ export const ES = {
     ],
     button: 'Siguiente',
   },
+
+  'email-title': 'Correo electrónico',
+  'email-description': 'Introduzca su correo electrónico para obtener acceso completo',
+  'email-placeholder': 'Tu correo electrónico',
+  'privacy-policy': 'Al continuar acepto la Política de privacidad y las Condiciones de uso.',
+  'button-next': 'Siguiente',
+
+  thanks: 'Gracias',
+  'thanks-description': 'por apoyarnos y pasar el cuestionario',
+
+  download: 'Descargar mis respuestas',
+
+  'button-retake': 'Volver al cuestionario',
 };

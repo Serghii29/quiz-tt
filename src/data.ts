@@ -1,35 +1,50 @@
-export const EN = {
-  1: {
-    type: 'single-select',
+export const questions = [
+  {
+    id: 1,
+    type: 'language-selection',
     title: 'What is your preferred language?',
     description: 'Choose language',
     options: ['English', 'French', 'German', 'Spanish'],
+    emoji: [],
+    button: '',
   },
 
-  2: {
-    type: 'single-select-image',
+  {
+    id: 2,
+    type: 'gender-selection',
     title: 'What gender do you identify with?',
     description: 'Please share how do you identify yourself',
     options: ['Female', 'Male', 'Other'],
+    emoji: ['👩', '🧔', '😉'],
+    button: '',
   },
 
-  3: {
+  {
+    id: 3,
     type: 'single-select',
     title: 'What is your age?',
+    description: '',
     options: ['18-29 years', '30-39 years', '40-49 years', '50+'],
+    emoji: [],
+    button: '',
   },
 
-  4: {
+  {
+    id: 4,
     type: 'multiple-select',
     title: 'What do you hate the most in a book?',
+    description: '',
     options: ['Lack of logic', 'A slow speed', 'Lack of humor', 'Way too generic ending'],
+    emoji: [],
     button: 'Next',
   },
 
-  5: {
+  {
+    id: 5,
     type: 'bubble',
     title: 'What are your favorite topics?',
     description: 'Choose up to 3 topics you like',
+    emoji: ['🐺', '💃', '👑', '🥰', '💁‍♀️', '🤠', '🤑'],
     options: [
       'Werewolf',
       'Action',
@@ -41,17 +56,4 @@ export const EN = {
     ],
     button: 'Next',
   },
-
-  'email-title': 'Email',
-  'email-description': 'Enter your email to get full access',
-  'email-placeholder': 'Your email',
-  'privacy-policy': 'By continuing I agree with Privacy policy and Terms of use.',
-  'button-next': 'Next',
-
-  thanks: 'Thank you',
-  'thanks-description': 'for supporting us and passing quiz',
-
-  download: 'Download my answers',
-
-  'button-retake': 'Retake quiz',
-};
+];

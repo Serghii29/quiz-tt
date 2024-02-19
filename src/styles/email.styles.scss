@@ -1,0 +1,43 @@
+.email {
+  &__container {
+    padding-top: 100px;
+    text-align: center;
+    margin-bottom: 50px;
+  }
+
+  &__title {
+    font-weight: 800;
+    font-size: 30px;
+    line-height: 38px;
+  }
+
+  &__description {
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 22px;
+    color: #C4C8CC;
+  }
+
+  &__input {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 30px 0 30px 20px;
+    border-radius: 16px;
+    border: 2px;
+    background-color: #36173D;
+    color: #fff;
+  }
+
+  &__privacy {
+    padding: 0 40px;
+    margin-top: 40px;
+    color: #B6B8C3;
+    text-align: center;
+  }
+
+  &__error {
+    padding-left: 40px;
+    margin-top: 10px;
+    color: #ff0000;
+  }
+}

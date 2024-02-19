@@ -1,0 +1,41 @@
+.thanks {
+
+  &__header-container {
+    text-align: center;
+    padding-top: 145px;
+  }
+
+  &__title {
+    font-weight: 400;
+    font-size: 36px;
+    line-height: 44px;
+  }
+
+  &__description {
+    margin-bottom: 50px;
+    font-weight: 600;
+    font-size: 17px;
+    line-height: 25px;
+    color: #ECECFB;
+  }
+
+  &__checkmark {
+    display: block;
+    margin: 0 auto;
+    width: 118px;
+    height: 118px;
+  }
+
+  &__download {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-top: 250px;
+    padding: 20px 0;
+    color: #ECECFB;
+    font-weight: 600;
+    font-size: 17px;
+    line-height: 25px;
+  }
+}
