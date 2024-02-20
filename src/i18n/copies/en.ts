@@ -42,9 +42,13 @@ export const EN = {
     ],
   },
 
-  'email-title': 'Email',
-  'email-description': 'Enter your email to get full access',
-  'email-placeholder': 'Your email',
+  6: {
+    title: 'Email',
+    type: 'email',
+    description: 'Enter your email to get full access',
+    placeholder: 'Your email',
+  },
+
   'privacy-policy': 'By continuing I agree with Privacy policy and Terms of use.',
   'button-next': 'Next',
 

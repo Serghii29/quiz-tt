@@ -5,5 +5,4 @@ export interface IQuestion {
   description: string;
   options: string[];
   emoji: string[];
-  button: string;
 }

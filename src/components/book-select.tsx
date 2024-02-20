@@ -2,9 +2,11 @@
 import React, { useCallback, useState } from 'react';
 import cn from 'classnames';
 import { useTranslation } from 'react-i18next';
+import { useNavigate } from 'react-router-dom';
 import { IQuestion } from '../types/type';
 import { Button } from './button';
 import '../styles/single-select.styles.scss';
+import { saveData } from '../utils/saveData';
 
 type Props = {
   question: IQuestion;
@@ -12,7 +14,9 @@ type Props = {
 
 export const BookSelect: React.FC<Props> = ({ question }) => {
   const { t } = useTranslation();
-  const { options } = question;
+  const navigate = useNavigate();
+
+  const { options, id } = question;
 
   const [selectedOptions, setSelectedOptions] = useState<string[]>([]);
 
@@ -21,6 +25,19 @@ export const BookSelect: React.FC<Props> = ({ question }) => {
       ? selectedOptions.filter((o) => o !== option)
       : [...selectedOptions, option];
     setSelectedOptions(newSelectedOptions);
+  }, [selectedOptions]);
+
+  const handleDataManagment = useCallback(() => {
+    const data = {
+      order: id,
+      title: t(`${id}.title`),
+      type: t(`${id}.type`),
+      answer: selectedOptions,
+    };
+
+    saveData(data);
+
+    navigate('/quiz/5');
   }, [selectedOptions]);
 
   return (
@@ -40,7 +57,7 @@ export const BookSelect: React.FC<Props> = ({ question }) => {
                 name="question"
                 value={t(`4.options.${index}`)}
                 className="select__checkbox"
-                onChange={() => handleOptionChange(option)}
+                onChange={() => handleOptionChange(t(`4.options.${index}`))}
               />
 
               <span className="select__custom-checkbox"> </span>
@@ -49,7 +66,11 @@ export const BookSelect: React.FC<Props> = ({ question }) => {
         ))}
       </div>
 
-      <Button type="button" title={t('button-next')} />
+      <Button
+        type="button"
+        title={t('button-next')}
+        handleDataManagment={handleDataManagment}
+      />
     </>
   );
 };

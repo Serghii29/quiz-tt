@@ -8,9 +8,9 @@ import { questions } from '../../data';
 import { IQuestion } from '../../types/type';
 import { GenderSelect } from '../../components/gender-select';
 import { AgeSelect } from '../../components/age-select';
-import { BookSelect } from '../../components/book-select';
 import { TopicSelect } from '../../components/topic-select';
 import '../../styles/quiz.styles.scss';
+import { BookSelect } from '../../components/book-select';
 
 const Quiz: React.FC = () => {
   const { id = 1 } = useParams();
@@ -39,7 +39,7 @@ const Quiz: React.FC = () => {
         <p className="quiz__question-description">{t(`${id}.description`)}</p>
       </div>
 
-      {question.type === 'single-select' && question.id === 1 && <LanguegeSelect />}
+      {question.type === 'single-select' && question.id === 1 && <LanguegeSelect question={question} />}
 
       {question.type === 'single-select-image' && <GenderSelect question={question} />}
 

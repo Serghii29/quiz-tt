@@ -42,9 +42,13 @@ export const ES = {
     ],
   },
 
-  'email-title': 'Correo electrónico',
-  'email-description': 'Introduzca su correo electrónico para obtener acceso completo',
-  'email-placeholder': 'Tu correo electrónico',
+  6: {
+    title: 'Correo electrónico',
+    type: 'correo electrónico',
+    description: 'Introduzca su correo electrónico para obtener acceso completo',
+    placeholder: 'Tu correo electrónico',
+  },
+
   'privacy-policy': 'Al continuar acepto la Política de privacidad y las Condiciones de uso.',
   'button-next': 'Siguiente',
 

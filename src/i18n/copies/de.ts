@@ -42,9 +42,13 @@ export const DE = {
     ],
   },
 
-  'email-title': 'E-Mail',
-  'email-description': 'Geben Sie Ihre E-Mail-Adresse ein, um vollen Zugang zu erhalten',
-  'email-placeholder': 'Deine E-Mail',
+  6: {
+    title: 'E-Mail',
+    type: 'e-mail',
+    description: 'Geben Sie Ihre E-Mail-Adresse ein, um vollen Zugang zu erhalten',
+    placeholder: 'Deine E-Mail',
+  },
+
   'privacy-policy':
     'Wenn ich fortfahre, erkläre ich mich mit den Datenschutzbestimmungen und Nutzungsbedingungen einverstanden.',
 

@@ -42,9 +42,13 @@ export const FR = {
     ],
   },
 
-  'email-title': 'Courriel',
-  'email-description': "Saisissez votre adresse électronique pour obtenir l'accès complet",
-  'email-placeholder': 'Votre email',
+  6: {
+    title: 'Courriel',
+    type: 'courriel',
+    description: "Saisissez votre adresse électronique pour obtenir l'accès complet",
+    placeholder: 'Votre email',
+  },
+
   'privacy-policy':
     "En continuant, j'accepte la politique de confidentialité et les conditions d'utilisation.",
   'button-next': 'Suivant',

@@ -6,7 +6,6 @@ export const questions = [
     description: 'Choose language',
     options: ['English', 'French', 'German', 'Spanish'],
     emoji: [],
-    button: '',
   },
 
   {
@@ -16,7 +15,6 @@ export const questions = [
     description: 'Please share how do you identify yourself',
     options: ['Female', 'Male', 'Other'],
     emoji: ['👩', '🧔', '😉'],
-    button: '',
   },
 
   {
@@ -26,7 +24,6 @@ export const questions = [
     description: '',
     options: ['18-29 years', '30-39 years', '40-49 years', '50+'],
     emoji: [],
-    button: '',
   },
 
   {
@@ -36,7 +33,6 @@ export const questions = [
     description: '',
     options: ['Lack of logic', 'A slow speed', 'Lack of humor', 'Way too generic ending'],
     emoji: [],
-    button: 'Next',
   },
 
   {
@@ -54,6 +50,5 @@ export const questions = [
       'Bad Boy',
       'Billionaire',
     ],
-    button: 'Next',
   },
 ];
