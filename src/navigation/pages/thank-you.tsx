@@ -40,11 +40,7 @@ const ThankYou: React.FC = () => {
 
       <img className="thanks__checkmark" src="/checkmark.png" alt="checkmark" />
 
-      <button
-        type="button"
-        className="thanks__download"
-        onClick={downloadAnswers}
-      >
+      <button type="button" className="thanks__download" onClick={downloadAnswers}>
         <img src="/download.svg" alt="" />
 
         <p className="thanks">{t('download')}</p>

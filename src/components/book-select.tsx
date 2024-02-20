@@ -20,12 +20,15 @@ export const BookSelect: React.FC<Props> = ({ question }) => {
 
   const [selectedOptions, setSelectedOptions] = useState<string[]>([]);
 
-  const handleOptionChange = useCallback((option: string) => {
-    const newSelectedOptions = selectedOptions.includes(option)
-      ? selectedOptions.filter((o) => o !== option)
-      : [...selectedOptions, option];
-    setSelectedOptions(newSelectedOptions);
-  }, [selectedOptions]);
+  const handleOptionChange = useCallback(
+    (option: string) => {
+      const newSelectedOptions = selectedOptions.includes(option)
+        ? selectedOptions.filter((o) => o !== option)
+        : [...selectedOptions, option];
+      setSelectedOptions(newSelectedOptions);
+    },
+    [selectedOptions],
+  );
 
   const handleDataManagment = useCallback(() => {
     const data = {
@@ -66,11 +69,7 @@ export const BookSelect: React.FC<Props> = ({ question }) => {
         ))}
       </div>
 
-      <Button
-        type="button"
-        title={t('button-next')}
-        handleDataManagment={handleDataManagment}
-      />
+      <Button type="button" title={t('button-next')} handleDataManagment={handleDataManagment} />
     </>
   );
 };

@@ -39,7 +39,9 @@ const Quiz: React.FC = () => {
         <p className="quiz__question-description">{t(`${id}.description`)}</p>
       </div>
 
-      {question.type === 'single-select' && question.id === 1 && <LanguegeSelect question={question} />}
+      {question.type === 'single-select' && question.id === 1 && (
+        <LanguegeSelect question={question} />
+      )}
 
       {question.type === 'single-select-image' && <GenderSelect question={question} />}
 

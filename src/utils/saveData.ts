@@ -1,8 +1,8 @@
 interface IData {
-  order: number,
-  title: string,
-  type: string,
-  answer: string | string[],
+  order: number;
+  title: string;
+  type: string;
+  answer: string | string[];
 }
 
 export const saveData = (data: IData) => {
