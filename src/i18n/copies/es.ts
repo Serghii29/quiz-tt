@@ -49,6 +49,8 @@ export const ES = {
     placeholder: 'Tu correo electrónico',
   },
 
+  progress: 'Encontrar colecciones para usted...',
+
   'privacy-policy': 'Al continuar acepto la Política de privacidad y las Condiciones de uso.',
   'button-next': 'Siguiente',
 

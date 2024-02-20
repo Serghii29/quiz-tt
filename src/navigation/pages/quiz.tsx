@@ -1,7 +1,8 @@
-import React, { useEffect, useState } from 'react';
+import React, { useCallback, useEffect, useState } from 'react';
 import '../../i18n';
-import { useParams } from 'react-router-dom';
+import { useNavigate, useParams } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
+import cn from 'classnames';
 import { ProgressBar } from '../../components/progress-bar';
 import { LanguegeSelect } from '../../components/languege-select';
 import { questions } from '../../data';
@@ -9,15 +10,20 @@ import { IQuestion } from '../../types/type';
 import { GenderSelect } from '../../components/gender-select';
 import { AgeSelect } from '../../components/age-select';
 import { TopicSelect } from '../../components/topic-select';
-import '../../styles/quiz.styles.scss';
 import { BookSelect } from '../../components/book-select';
+import '../../styles/quiz.styles.scss';
 
 const Quiz: React.FC = () => {
   const { id = 1 } = useParams();
+  const navigate = useNavigate();
 
   const [question, setQuestion] = useState<IQuestion>(questions[+id - 1]);
 
   const { t } = useTranslation();
+
+  const handleBack = useCallback(() => {
+    navigate(-1);
+  }, []);
 
   useEffect(() => {
     setQuestion(questions[+id - 1]);
@@ -27,6 +33,15 @@ const Quiz: React.FC = () => {
     <div className="quiz">
       <header className="quiz__header">
         <div className="quiz__prodress-container">
+          <button
+            type="button"
+            className={cn('quiz__navigate', {
+              active: +id > 1,
+            })}
+            onClick={handleBack}
+          >
+            {}
+          </button>
           <span className="quiz__header-number">{id}</span>
           <span>/ 5</span>
         </div>

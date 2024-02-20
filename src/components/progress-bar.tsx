@@ -20,7 +20,7 @@ export const ProgressBar: React.FC<Props> = ({ progress }) => {
     border-radius: 5px;
     border: 1px solid #e4229c;
     overflow: hidden;
-    transition: width 1s ease-in-out;
+    transition: width 0.3s ease-in-out;
 
     &::before {
       content: '';
@@ -30,7 +30,7 @@ export const ProgressBar: React.FC<Props> = ({ progress }) => {
       bottom: 0;
       width: ${width}%;
       background-image: linear-gradient(to right, #e4229c 0%, #e4229c 80%, #fff 50%, #fff 100%);
-      transition: width 2s ease-in-out;
+      // transition: width 2s ease-in-out;
     }
   `;
 

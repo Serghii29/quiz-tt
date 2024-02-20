@@ -50,7 +50,7 @@ export const BookSelect: React.FC<Props> = ({ question }) => {
           <div
             key={option}
             className={cn('select__button', {
-              selected: selectedOptions.includes(option),
+              selected: selectedOptions.includes(t(`4.options.${index}`)),
             })}
           >
             <label>

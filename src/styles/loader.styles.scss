@@ -1,0 +1,36 @@
+.loader {
+  color: #fff;
+
+  &__progress-bar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: 252px;
+    height: 252px;
+    border-radius: 50%;
+    border: 10px solid #fff;
+    font-weight: 800;
+    font-size: 52px;
+    line-height: 62px;
+  }
+
+  &__progress-bar--animated {
+    animation: 5s linear fill-border;
+  }
+
+  &__description {
+    text-align: center;
+    margin-top: 50px;
+  }
+}
+
+@keyframes fill-border {
+  from {
+    border-color: #fff;
+  }
+
+  to {
+    border-color: #E4229C;
+  }
+}

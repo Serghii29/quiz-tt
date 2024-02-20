@@ -49,6 +49,8 @@ export const DE = {
     placeholder: 'Deine E-Mail',
   },
 
+  progress: 'Sammlungen für Sie finden...',
+
   'privacy-policy':
     'Wenn ich fortfahre, erkläre ich mich mit den Datenschutzbestimmungen und Nutzungsbedingungen einverstanden.',
 

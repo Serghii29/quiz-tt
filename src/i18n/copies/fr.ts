@@ -36,8 +36,8 @@ export const FR = {
       'Action',
       'Obsession royale',
       'Romance',
-      'Young Adult',
-      'Bad Boy',
+      'Jeune adulte',
+      'Mauvais garçon',
       'Milliardaire',
     ],
   },
@@ -48,6 +48,8 @@ export const FR = {
     description: "Saisissez votre adresse électronique pour obtenir l'accès complet",
     placeholder: 'Votre email',
   },
+
+  progress: 'Trouver des collections pour vous...',
 
   'privacy-policy':
     "En continuant, j'accepte la politique de confidentialité et les conditions d'utilisation.",

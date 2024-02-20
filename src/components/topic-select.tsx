@@ -4,8 +4,8 @@ import { useNavigate } from 'react-router-dom';
 import cn from 'classnames';
 import { IQuestion } from '../types/type';
 import { Button } from './button';
-import '../styles/bubble.styles.scss';
 import { saveData } from '../utils/saveData';
+import '../styles/bubble.styles.scss';
 
 type Props = {
   question: IQuestion;
@@ -50,7 +50,7 @@ export const TopicSelect: React.FC<Props> = ({ question }) => {
             type="button"
             key={option}
             className={cn('bubble__button', {
-              selected: selectedTopics.includes(option),
+              selected: selectedTopics.includes(t(`5.options.${index}`)),
             })}
             onClick={() => handleSelectTopic(t(`5.options.${index}`))}
           >

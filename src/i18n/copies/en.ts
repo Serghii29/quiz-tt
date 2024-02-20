@@ -49,6 +49,8 @@ export const EN = {
     placeholder: 'Your email',
   },
 
+  progress: 'Finding collections for you...',
+
   'privacy-policy': 'By continuing I agree with Privacy policy and Terms of use.',
   'button-next': 'Next',
 
