@@ -60,4 +60,8 @@ export const EN = {
   download: 'Download my answers',
 
   'button-retake': 'Retake quiz',
+
+  hate: 'hate',
+
+  'privacy-and-terms': 'Privacy policy Terms of use.',
 };

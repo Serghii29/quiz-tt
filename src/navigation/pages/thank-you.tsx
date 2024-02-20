@@ -46,7 +46,12 @@ const ThankYou: React.FC = () => {
         <p className="thanks">{t('download')}</p>
       </button>
 
-      <Button type="button" title={t('button-retake')} handleDataManagment={handleRetareQuiz} />
+      <Button
+        type="button"
+        title={t('button-retake')}
+        handleDataManagment={handleRetareQuiz}
+        isDisabled={false}
+      />
     </div>
   );
 };

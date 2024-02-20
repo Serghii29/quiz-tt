@@ -1,16 +1,18 @@
 /* eslint-disable jsx-a11y/label-has-associated-control */
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import * as Yup from 'yup';
 import { useFormik } from 'formik';
 import { useTranslation } from 'react-i18next';
-import { useNavigate } from 'react-router-dom';
+import { NavLink, useNavigate } from 'react-router-dom';
 import { Button } from '../../components/button';
-import '../../styles/email.styles.scss';
 import { saveData } from '../../utils/saveData';
+import '../../styles/email.styles.scss';
 
 const Email: React.FC = () => {
   const { t } = useTranslation();
   const navigate = useNavigate();
+
+  const [isDisabled, setIsDisable] = useState(true);
 
   const emailSchema = Yup.object().shape({
     email: Yup.string().email('Invalid email').required('Required'),
@@ -34,6 +36,12 @@ const Email: React.FC = () => {
       navigate('/thank-you');
     },
   });
+
+  useEffect(() => {
+    const checkInput = formik.values.email === '' || formik.errors.email === 'Invalid email';
+
+    setIsDisable(checkInput);
+  }, [formik]);
 
   return (
     <div>
@@ -59,9 +67,32 @@ const Email: React.FC = () => {
           ) : null}
         </label>
 
-        <p className="email__privacy">{t('privacy-policy')}</p>
+        <p className="email__privacy">
+          {t('privacy-policy')
+            .split(' ')
+            .map((part) => (
+              t('privacy-and-terms').includes(part)
+                ? (
+                  <NavLink to="/">
+                    <span key={part} style={{ color: 'red' }}>
+                      {`${part} `}
+                    </span>
+                  </NavLink>
 
-        <Button type="submit" title={t('button-next')} handleDataManagment={() => {}} />
+                ) : (
+                  <span key={part} style={{ color: 'white' }}>
+                    {`${part} `}
+                  </span>
+                )
+            ))}
+        </p>
+
+        <Button
+          type="submit"
+          title={t('button-next')}
+          handleDataManagment={() => {}}
+          isDisabled={isDisabled}
+        />
       </form>
     </div>
   );

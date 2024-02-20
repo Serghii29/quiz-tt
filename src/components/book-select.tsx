@@ -1,12 +1,12 @@
 /* eslint-disable jsx-a11y/label-has-associated-control */
-import React, { useCallback, useState } from 'react';
+import React, { useCallback, useEffect, useState } from 'react';
 import cn from 'classnames';
 import { useTranslation } from 'react-i18next';
 import { useNavigate } from 'react-router-dom';
 import { IQuestion } from '../types/type';
 import { Button } from './button';
-import '../styles/single-select.styles.scss';
 import { saveData } from '../utils/saveData';
+import '../styles/single-select.styles.scss';
 
 type Props = {
   question: IQuestion;
@@ -19,6 +19,7 @@ export const BookSelect: React.FC<Props> = ({ question }) => {
   const { options, id } = question;
 
   const [selectedOptions, setSelectedOptions] = useState<string[]>([]);
+  const [isDisabled, setIsDisable] = useState(true);
 
   const handleOptionChange = useCallback(
     (option: string) => {
@@ -41,6 +42,10 @@ export const BookSelect: React.FC<Props> = ({ question }) => {
     saveData(data);
 
     navigate('/quiz/5');
+  }, [selectedOptions]);
+
+  useEffect(() => {
+    setIsDisable(selectedOptions.length === 0);
   }, [selectedOptions]);
 
   return (
@@ -69,7 +74,12 @@ export const BookSelect: React.FC<Props> = ({ question }) => {
         ))}
       </div>
 
-      <Button type="button" title={t('button-next')} handleDataManagment={handleDataManagment} />
+      <Button
+        type="button"
+        title={t('button-next')}
+        handleDataManagment={handleDataManagment}
+        isDisabled={isDisabled}
+      />
     </>
   );
 };

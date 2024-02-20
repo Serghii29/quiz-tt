@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { useNavigate } from 'react-router-dom';
+import { CircleProgressBar } from '../../components/circle-progress-bar';
 import '../../styles/loader.styles.scss';
 
 const Loader: React.FC = () => {
@@ -10,27 +11,26 @@ const Loader: React.FC = () => {
   const [progress, setProgress] = useState(0);
 
   useEffect(() => {
-    const interval = setInterval(() => {
-      setProgress(progress + 25);
-    }, 1000);
+    let delay = 50;
+    let timeout = setTimeout(() => {
+      setProgress(progress + 1);
 
-    return () => {
-      if (progress === 100) {
-        clearInterval(interval);
+      if (progress < 100) {
+        delay += 50;
+        timeout = setTimeout(() => {
+          setProgress(progress + 1);
+        }, delay);
+      } else {
         navigate('/email');
       }
-    };
+    }, delay);
+
+    return () => clearTimeout(timeout);
   }, [progress]);
 
   return (
     <div className="loader">
-      <div className="loader__progress-bar loader__progress-bar--animated">
-        <p>
-          {' '}
-          {progress}
-          %
-        </p>
-      </div>
+      <CircleProgressBar progress={progress} circleWidth="252" />
       <p className="loader__description">{t('progress')}</p>
     </div>
   );

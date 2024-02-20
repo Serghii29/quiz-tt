@@ -50,7 +50,15 @@ const Quiz: React.FC = () => {
       </header>
 
       <div className="quiz__question-container">
-        <h2 className="quiz__question-title">{t(`${id}.title`)}</h2>
+        <h2 className="quiz__question-title">
+          {t(`${id}.title`)
+            .split(' ')
+            .map((part) => (
+              <span key={part} style={{ color: part === t('hate') ? 'red' : 'white' }}>
+                {`${part} `}
+              </span>
+            ))}
+        </h2>
         <p className="quiz__question-description">{t(`${id}.description`)}</p>
       </div>
 

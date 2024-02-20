@@ -1,0 +1,20 @@
+.circle {
+  &__background {
+    fill: none;
+    stroke: #fff;
+  }
+
+  &__progress {
+    fill: none;
+    stroke: #E4229C;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+  }
+
+  &__text {
+    font-weight: 800;
+    font-size: 52px;
+    line-height: 62px;
+    fill: #fff;
+  }
+}

@@ -10,7 +10,7 @@ export const DE = {
     type: 'einzelauswahl-bild',
     title: 'Mit welchem Geschlecht identifizieren Sie sich?',
     description: 'Bitte teilen Sie uns mit, wie Sie sich selbst identifizieren',
-    options: ['Weiblich", "Männlich", "Sonstige'],
+    options: ['Weiblich', 'Männlich', 'Sonstige'],
   },
 
   3: {
@@ -24,7 +24,7 @@ export const DE = {
     type: 'Mehrfachauswahl',
     title: 'Was hassen Sie am meisten an einem Bu?',
     description: '',
-    options: ['Fehlende Logik", "Langsames Tempo", "Fehlender Humor", "Viel zu generisches Ende'],
+    options: ['Fehlende Logik', 'Langsames Tempo', 'Fehlender Humor', 'Viel zu generisches Ende'],
   },
 
   5: {
@@ -62,4 +62,8 @@ export const DE = {
   download: 'Download meiner Antworten',
 
   'button-retake': 'Quiz wiederholen',
+
+  hate: 'hassen',
+
+  'privacy-and-terms': 'Datenschutzbestimmungen Nutzungsbedingungen einverstanden.',
 };

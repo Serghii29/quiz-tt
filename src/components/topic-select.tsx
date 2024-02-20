@@ -1,4 +1,4 @@
-import React, { useCallback, useState } from 'react';
+import React, { useCallback, useEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { useNavigate } from 'react-router-dom';
 import cn from 'classnames';
@@ -17,6 +17,7 @@ export const TopicSelect: React.FC<Props> = ({ question }) => {
   const { options, emoji, id } = question;
 
   const [selectedTopics, setSelectedTopics] = useState<string[]>([]);
+  const [isDisabled, setIsDisable] = useState(true);
 
   const handleSelectTopic = useCallback(
     (topic: string) => {
@@ -42,6 +43,10 @@ export const TopicSelect: React.FC<Props> = ({ question }) => {
     navigate('/loader');
   }, [selectedTopics]);
 
+  useEffect(() => {
+    setIsDisable(selectedTopics.length === 0);
+  }, [selectedTopics]);
+
   return (
     <>
       <div className="bubble__container">
@@ -60,7 +65,12 @@ export const TopicSelect: React.FC<Props> = ({ question }) => {
         ))}
       </div>
 
-      <Button type="button" title={t('button-next')} handleDataManagment={handleDataManagment} />
+      <Button
+        type="button"
+        title={t('button-next')}
+        handleDataManagment={handleDataManagment}
+        isDisabled={isDisabled}
+      />
     </>
   );
 };

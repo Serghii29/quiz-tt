@@ -60,4 +60,8 @@ export const ES = {
   download: 'Descargar mis respuestas',
 
   'button-retake': 'Volver al cuestionario',
+
+  hate: 'odia',
+
+  'privacy-and-terms': 'la Política de privacidad las Condiciones de uso.',
 };
