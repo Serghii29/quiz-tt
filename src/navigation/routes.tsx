@@ -6,11 +6,13 @@ import Quiz from './pages/quiz';
 import Loader from './pages/loader';
 import Email from './pages/email';
 import ThankYou from './pages/thank-you';
+import ErrorPage from './pages/error-page';
 
 export const router = createBrowserRouter([
   {
     path: '/',
     element: <Layout />,
+    errorElement: <ErrorPage />,
     children: [
       {
         index: true,

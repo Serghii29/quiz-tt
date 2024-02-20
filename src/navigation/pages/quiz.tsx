@@ -13,7 +13,7 @@ import { TopicSelect } from '../../components/topic-select';
 import { BookSelect } from '../../components/book-select';
 import '../../styles/quiz.styles.scss';
 
-const Quiz: React.FC = () => {
+const Quiz: React.FC = React.memo(() => {
   const { id = 1 } = useParams();
   const navigate = useNavigate();
 
@@ -75,6 +75,6 @@ const Quiz: React.FC = () => {
       {question.type === 'bubble' && <TopicSelect question={question} />}
     </div>
   );
-};
+});
 
 export default Quiz;

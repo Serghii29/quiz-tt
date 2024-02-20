@@ -58,7 +58,7 @@ export const BookSelect: React.FC<Props> = ({ question }) => {
               selected: selectedOptions.includes(t(`4.options.${index}`)),
             })}
           >
-            <label>
+            <label className="select__label">
               {t(`4.options.${index}`)}
               <input
                 type="checkbox"

@@ -3,17 +3,12 @@ import { NavLink } from 'react-router-dom';
 import { Button } from '../../components/button';
 import '../../styles/home-page.styles.scss';
 
-const Home: React.FC = () => (
+const Home: React.FC = React.memo(() => (
   <div className="home-page">
     <NavLink to="quiz/1">
-      <Button
-        type="button"
-        title="Start Quiz"
-        handleDataManagment={() => {}}
-        isDisabled={false}
-      />
+      <Button type="button" title="Start Quiz" handleDataManagment={() => {}} isDisabled={false} />
     </NavLink>
   </div>
-);
+));
 
 export default Home;

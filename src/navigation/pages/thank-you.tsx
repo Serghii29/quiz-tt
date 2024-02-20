@@ -5,7 +5,7 @@ import Papa from 'papaparse';
 import { Button } from '../../components/button';
 import '../../styles/thanks.styles.scss';
 
-const ThankYou: React.FC = () => {
+const ThankYou: React.FC = React.memo(() => {
   const { t } = useTranslation();
   const navigate = useNavigate();
 
@@ -54,6 +54,6 @@ const ThankYou: React.FC = () => {
       />
     </div>
   );
-};
+});
 
 export default ThankYou;

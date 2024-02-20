@@ -13,11 +13,7 @@ export const CircleProgressBar: React.FC<Props> = ({ progress, circleWidth }) =>
 
   return (
     <div>
-      <svg
-        width={circleWidth}
-        height={circleWidth}
-        viewBox={`0 0 ${circleWidth} ${circleWidth}`}
-      >
+      <svg width={circleWidth} height={circleWidth} viewBox={`0 0 ${circleWidth} ${circleWidth}`}>
         <circle
           cx={+circleWidth / 2}
           cy={+circleWidth / 2}

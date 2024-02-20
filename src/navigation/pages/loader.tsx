@@ -4,7 +4,7 @@ import { useNavigate } from 'react-router-dom';
 import { CircleProgressBar } from '../../components/circle-progress-bar';
 import '../../styles/loader.styles.scss';
 
-const Loader: React.FC = () => {
+const Loader: React.FC = React.memo(() => {
   const { t } = useTranslation();
   const navigate = useNavigate();
 
@@ -34,6 +34,6 @@ const Loader: React.FC = () => {
       <p className="loader__description">{t('progress')}</p>
     </div>
   );
-};
+});
 
 export default Loader;
